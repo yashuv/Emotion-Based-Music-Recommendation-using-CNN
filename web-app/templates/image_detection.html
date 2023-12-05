@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image-Detection</title>
+    <link rel="stylesheet" href="/static/style/design.css">
+    
+      
+</head>
+<body>
+    <center id="tt">
+        Emotion-Detector
+    </center>
+    
+    <!-- Form for uploading an image -->
+    <div class="form">
+      <form method='POST' enctype="multipart/form-data" action = "/image/">
+              <input type="file" id="image" name="image" accept="image" />
+              <label for="image">Select Image</label>
+          <button class="submit-btn">Predict</button>
+      </form>
+    </div>
+    <center>
+      <div id="video">
+        <img id="image-placeholder" src= "../static/images/uploaded.jpg" alt="Uploaded Image" width = "640" height="480"/>
+      </div>
+      <center id="prediction">
+        Emotion Detected : {{prediction}} <br> 
+        Music Recommendation : {{recommended_song}}
+      </center>
+      
+  </center>
+    
+    <div class="form">
+      <form method='POST' enctype="multipart/form-data" action="/">
+          <button class="submit-btn" name="button-value" value="live">Detect Live Instead</button>
+      </form>
+  </div>
+
+
+</body>
+</html>
